@@ -1,7 +1,8 @@
-<button id="fullscreen-btn">Play KartBros in Fullscreen</button>
+<button id="fullscreen-kartbros">Play Fullscreen</button>
 <script>
-document.getElementById('fullscreen-btn').onclick = function() {
-    const newWin = window.open('https://kartbros.io', '_blank');
-    newWin.focus();
+document.getElementById('fullscreen-kartbros').onclick = function() {
+    const newWin = window.open('', '_blank');
+    newWin.document.write('<iframe src="https://kartbros.io" style="width:100vw;height:100vh;border:none;" allowfullscreen></iframe>');
+    newWin.document.body.requestFullscreen?.();
 };
 </script>
